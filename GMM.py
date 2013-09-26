@@ -314,6 +314,7 @@ class GMM(BaseEstimator):
                + np.log(self.weights_))
         logprob = logsumexp(lpr, axis=1)
         responsibilities = np.exp(lpr - logprob[:, np.newaxis])
+
         return logprob, responsibilities
 
     def score(self, X):
@@ -437,16 +438,7 @@ class GMM(BaseEstimator):
                 miniBatchCluster = MiniBatchKMeans(n_clusters=self.n_components).fit(X)
                 util.storeObject("miniBatchCluster.pkl", miniBatchCluster)
 
-
-
-
-
-
                 self.means_ = miniBatchCluster.cluster_centers_
-
-
-
-
 
 
             if 'w' in self.init_params or not hasattr(self, 'weights_'):
@@ -517,6 +509,7 @@ class GMM(BaseEstimator):
             self.covars_ = covar_mstep_func(
                 self, X, responsibilities, weighted_X_sum, inverse_weights,
                 min_covar)
+
         return weights
 
     def _n_parameters(self):

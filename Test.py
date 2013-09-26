@@ -38,7 +38,7 @@ n_classes = len(np.unique(y_train))
 
 # Try GMMs using different types of covariances.
 classifiers = dict((covar_type, GMM.GMM(n_components=n_classes,
-                    covariance_type=covar_type, init_params='wc', n_iter=20))
+                    covariance_type=covar_type, init_params='wmc', n_iter=20))
                    for covar_type in ['spherical', 'diag', 'tied', 'full'])
 
 n_classifiers = len(classifiers)

@@ -4,8 +4,9 @@
     <list default="true" id="dc956a27-a1a9-4b7a-bd52-c6d5945254b9" name="Default" comment="" />
     <ignored path="GaussianMixtureModel.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/GMM.py" changelist="dc956a27-a1a9-4b7a-bd52-c6d5945254b9" time="1380183620507" ignored="false" />
-    <file path="/Test.py" changelist="dc956a27-a1a9-4b7a-bd52-c6d5945254b9" time="1380182571362" ignored="false" />
+    <file path="/GMM.py" changelist="dc956a27-a1a9-4b7a-bd52-c6d5945254b9" time="1380188867858" ignored="false" />
+    <file path="/Test.py" changelist="dc956a27-a1a9-4b7a-bd52-c6d5945254b9" time="1380188696035" ignored="false" />
+    <file path="/MAP_GMM.py" changelist="dc956a27-a1a9-4b7a-bd52-c6d5945254b9" time="1380209926719" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,44 +20,53 @@
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
   </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file leaf-file-name="MAP_GMM.py" pinned="false" current="true" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/MAP_GMM.py">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state line="74" column="45" selection-start="2449" selection-end="2449" vertical-scroll-proportion="0.64912283">
+                    <folding>
+                      <element signature="e#23#33#0" expanded="true" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="GaussianMixtureModel" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="GMM.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="GMM.py" pinned="false" current="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/GMM.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="443" column="0" selection-start="15646" selection-end="15646" vertical-scroll-proportion="0.43243244">
+            <state line="542" column="0" selection-start="19893" selection-end="19893" vertical-scroll-proportion="4.6298933">
               <folding>
                 <element signature="e#290#308#0" expanded="true" />
                 <element signature="e#637#1844#1" expanded="false" />
-                <element signature="e#2328#3099#1" expanded="false" />
                 <element signature="e#3683#7827#1" expanded="false" />
                 <element signature="e#8887#9260#1" expanded="false" />
                 <element signature="e#10085#10850#1" expanded="false" />
-                <element signature="e#11513#11915#1" expanded="false" />
-                <element signature="e#12017#12223#1" expanded="false" />
-                <element signature="e#12370#12767#1" expanded="false" />
-                <element signature="e#12921#13221#1" expanded="false" />
-                <element signature="e#14406#15002#1" expanded="false" />
-                <element signature="e#19530#19797#1" expanded="false" />
-                <element signature="e#19931#20196#1" expanded="false" />
-                <element signature="e#25865#26026#0" expanded="false" />
-                <element signature="e#26137#26739#0" expanded="false" />
-                <marker date="1380183634000" expanded="true" signature="6401:6455" placeholder="import ..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Utility.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Utility.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="20" selection-start="1002" selection-end="1002" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#23#32#0" expanded="true" />
+                <element signature="e#11514#11916#1" expanded="false" />
+                <element signature="e#12018#12224#1" expanded="false" />
+                <element signature="e#12371#12768#1" expanded="false" />
+                <element signature="e#12922#13222#1" expanded="false" />
+                <element signature="e#14407#15003#1" expanded="false" />
+                <element signature="e#19523#19790#1" expanded="false" />
+                <element signature="e#19924#20189#1" expanded="false" />
+                <element signature="e#25858#26019#0" expanded="false" />
+                <element signature="e#26130#26732#0" expanded="false" />
+                <marker date="1380188789000" expanded="true" signature="6401:6455" placeholder="import ..." />
               </folding>
             </state>
           </provider>
@@ -65,7 +75,7 @@
       <file leaf-file-name="Test.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="56" selection-start="1457" selection-end="1457" vertical-scroll-proportion="0.0">
+            <state line="43" column="32" selection-start="1354" selection-end="1354" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -83,17 +93,17 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/Test.py" />
         <option value="$PROJECT_DIR$/Utility.py" />
+        <option value="$PROJECT_DIR$/Test.py" />
         <option value="$PROJECT_DIR$/GMM.py" />
+        <option value="$PROJECT_DIR$/MAP_GMM.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="56" />
-    <option name="y" value="22" />
-    <option name="width" value="1227" />
-    <option name="height" value="778" />
+    <option name="y" value="-1080" />
+    <option name="width" value="1920" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -152,7 +162,15 @@
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
   </component>
-  <component name="RunManager" selected="Python.Test">
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <PyConsoleSettings />
+    </option>
+    <option name="myDjangoConsoleState">
+      <PyConsoleSettings />
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.MAP_GMM">
     <configuration default="false" name="Test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -168,7 +186,30 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Test.py" />
       <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PyDebugRunner" />
       <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PyDebugRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="MAP_GMM" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="GaussianMixtureModel" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MAP_GMM.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PyDebugRunner" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PyDebugRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
@@ -231,12 +272,14 @@
       <option name="USE_PATTERN" value="false" />
       <method />
     </configuration>
-    <list size="1">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Python.Test" />
+      <item index="1" class="java.lang.String" itemvalue="Python.MAP_GMM" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Python.Test" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Python.MAP_GMM" />
+        <item index="1" class="java.lang.String" itemvalue="Python.Test" />
       </list>
     </recent_temporary>
   </component>
@@ -250,18 +293,18 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="56" y="22" width="1227" height="778" extended-state="6" />
-    <editor active="false" />
+    <frame x="0" y="-1080" width="1920" height="1080" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24978831" sideWeight="0.7712121" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24978831" sideWeight="0.7712121" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15741728" sideWeight="0.6145833" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.7708333" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.7125" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22878788" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38541666" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -304,7 +347,7 @@
     <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
-    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
+    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="false" />
     <option name="SHOW_DIRTY_RECURSIVELY" value="false" />
     <option name="LIMIT_HISTORY" value="true" />
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
@@ -330,47 +373,66 @@
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="21" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Test.py">
+    <entry file="file:///Library/Python/2.7/site-packages/scikit_learn-0.14_git-py2.7-macosx-10.8-intel.egg/sklearn/utils/extmath.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="56" selection-start="1457" selection-end="1457" vertical-scroll-proportion="0.0">
+        <state line="244" column="0" selection-start="7670" selection-end="7670" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <marker date="1373509070000" expanded="false" signature="-1:-1" placeholder="import ..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Utility.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="20" selection-start="1002" selection-end="1002" vertical-scroll-proportion="0.0">
+        <state line="35" column="40" selection-start="928" selection-end="928" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#23#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="32" selection-start="1354" selection-end="1354" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/GMM.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="443" column="0" selection-start="15646" selection-end="15646" vertical-scroll-proportion="0.43243244">
+        <state line="542" column="0" selection-start="19893" selection-end="19893" vertical-scroll-proportion="4.6298933">
           <folding>
             <element signature="e#290#308#0" expanded="true" />
             <element signature="e#637#1844#1" expanded="false" />
-            <element signature="e#2328#3099#1" expanded="false" />
             <element signature="e#3683#7827#1" expanded="false" />
             <element signature="e#8887#9260#1" expanded="false" />
             <element signature="e#10085#10850#1" expanded="false" />
-            <element signature="e#11513#11915#1" expanded="false" />
-            <element signature="e#12017#12223#1" expanded="false" />
-            <element signature="e#12370#12767#1" expanded="false" />
-            <element signature="e#12921#13221#1" expanded="false" />
-            <element signature="e#14406#15002#1" expanded="false" />
-            <element signature="e#19530#19797#1" expanded="false" />
-            <element signature="e#19931#20196#1" expanded="false" />
-            <element signature="e#25865#26026#0" expanded="false" />
-            <element signature="e#26137#26739#0" expanded="false" />
-            <marker date="1380183634000" expanded="true" signature="6401:6455" placeholder="import ..." />
+            <element signature="e#11514#11916#1" expanded="false" />
+            <element signature="e#12018#12224#1" expanded="false" />
+            <element signature="e#12371#12768#1" expanded="false" />
+            <element signature="e#12922#13222#1" expanded="false" />
+            <element signature="e#14407#15003#1" expanded="false" />
+            <element signature="e#19523#19790#1" expanded="false" />
+            <element signature="e#19924#20189#1" expanded="false" />
+            <element signature="e#25858#26019#0" expanded="false" />
+            <element signature="e#26130#26732#0" expanded="false" />
+            <marker date="1380188789000" expanded="true" signature="6401:6455" placeholder="import ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MAP_GMM.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="74" column="45" selection-start="2449" selection-end="2449" vertical-scroll-proportion="0.64912283">
+          <folding>
+            <element signature="e#23#33#0" expanded="true" />
           </folding>
         </state>
       </provider>
