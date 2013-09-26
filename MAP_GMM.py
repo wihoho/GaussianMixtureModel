@@ -2,8 +2,8 @@ __author__ = 'GongLi'
 
 import GMM
 import numpy as np
-from sklearn import datasets
-from sklearn.cross_validation import StratifiedKFold
+import os
+import Utility as util
 
 
 EPS = np.finfo(float).eps
@@ -66,23 +66,45 @@ class MAP_GMM:
 
 if __name__ == "__main__":
 
-    iris = datasets.load_iris()
+    path = "/Users/GongLi/Dropbox/FYP/Duan Lixin Data Set/sift_features/Kodak"
+    allKodakVideos = np.zeros((1, 2500))
 
-    # Break up the dataset into non-overlapping training (75%) and testing
-    # (25%) sets.
-    skf = StratifiedKFold(iris.target, n_folds=4)
-    # Only take the first fold.
-    train_index, test_index = next(iter(skf))
+    for label in os.listdir(path):
+        classPath = path +"/"+ label
+        for video in os.listdir(classPath):
+            videoPath = classPath +"/"+ video
+            print videoPath
+
+            videoData = util.readVideoData(videoPath, subSampling=1)
+            allKodakVideos = np.vstack((allKodakVideos, videoData))
+
+    allKodakVideos = allKodakVideos[1:]
+    print "Kodak Videos Size: " + str(allKodakVideos.shape)
+
+    # Perform GMM
+    globalGaussianMixture = GMM.GMM(n_components=1000, covariance_type="spherical", init_params="wmc", n_init=50)
+    globalGaussianMixture.fit(allKodakVideos)
+
+    util.storeObject("GlobalGaussianMixtureModel.pkl", globalGaussianMixture)
+
+    # Perform MAP GMM for each video clip
+    for label in os.listdir(path):
+        classPath = path +"/"+ label
+        for video in os.listdir(classPath):
+
+            videoPath = classPath +"/"+ video
+            print "MAP: "+videoPath
+
+            videoData = util.readVideoData(videoPath, subSampling=1)
+            mapGMM = MAP_GMM(globalGaussianMixture, videoData)
+            mapMean = mapGMM.MAP()
+
+            outputFileName = "MAP/"+label+"_"+video
+            util.storeObject(outputFileName, mapMean)
 
 
-    X_train = iris.data[train_index]
-    y_train = iris.target[train_index]
-    X_test = iris.data[test_index]
-    y_test = iris.target[test_index]
 
-    globalGMM = GMM.GMM(n_components=3, covariance_type="spherical", init_params="wmc", n_iter=50)
-    globalGMM.fit(X_train)
-    mapGMM = MAP_GMM(globalGMM, X_test)
-    result = mapGMM.MAP()
 
-    print "Yes"
+
+
+
