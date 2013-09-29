@@ -4,6 +4,7 @@ import GMM
 import numpy as np
 import os
 import Utility as util
+import time
 
 
 EPS = np.finfo(float).eps
@@ -66,41 +67,43 @@ class MAP_GMM:
 
 if __name__ == "__main__":
 
+    logFile = open("log", "w")
+    logFile.write("Satrt reading Kodak videos: "+time.ctime() +"\n")
+
     path = "/Users/GongLi/Dropbox/FYP/Duan Lixin Data Set/sift_features/Kodak"
-    allKodakVideos = np.zeros((1, 2500))
+    videoList = []
 
     for label in os.listdir(path):
+        if label == ".DS_Store":
+            continue
+
         classPath = path +"/"+ label
         for video in os.listdir(classPath):
+            if video == ".DS_Store":
+                continue
+
             videoPath = classPath +"/"+ video
             print videoPath
 
-            videoData = util.readVideoData(videoPath, subSampling=1)
-            allKodakVideos = np.vstack((allKodakVideos, videoData))
+            videoData = util.readVideoData(videoPath, subSampling=50)
+            videoList.append(videoData)
 
-    allKodakVideos = allKodakVideos[1:]
+
+    allKodakVideos = np.vstack(videoList)
     print "Kodak Videos Size: " + str(allKodakVideos.shape)
+    logFile.write("Kodak Video Size: " +str(allKodakVideos.shape) +"\n")
+    logFile.write("Finish reading Kodak videos: " +time.ctime()+ "\n")
+    print "Finish reading Kodak videos: "+time.ctime()
 
     # Perform GMM
-    globalGaussianMixture = GMM.GMM(n_components=1000, covariance_type="spherical", init_params="wmc", n_init=50)
+    globalGaussianMixture = GMM.GMM(n_components=1000, covariance_type="spherical", init_params="wmc")
     globalGaussianMixture.fit(allKodakVideos)
 
     util.storeObject("GlobalGaussianMixtureModel.pkl", globalGaussianMixture)
+    logFile.write("Finishing building Global GMM:" +time.ctime()+"/n")
+    print "Finishing building Global GMM" + time.ctime()
+    logFile.close()
 
-    # Perform MAP GMM for each video clip
-    for label in os.listdir(path):
-        classPath = path +"/"+ label
-        for video in os.listdir(classPath):
-
-            videoPath = classPath +"/"+ video
-            print "MAP: "+videoPath
-
-            videoData = util.readVideoData(videoPath, subSampling=1)
-            mapGMM = MAP_GMM(globalGaussianMixture, videoData)
-            mapMean = mapGMM.MAP()
-
-            outputFileName = "MAP/"+label+"_"+video
-            util.storeObject(outputFileName, mapMean)
 
 
 
