@@ -226,7 +226,7 @@ class GMM(BaseEstimator):
 
     def __init__(self, n_components=1, covariance_type='diag',
                  random_state=None, thresh=1e-2, min_covar=1e-3,
-                 n_iter=100, n_init=1, params='wmc', init_params='wmc'):
+                 n_iter=20, n_init=1, params='wmc', init_params='wmc'):
         self.n_components = n_components
         self.covariance_type = covariance_type
         self.thresh = thresh

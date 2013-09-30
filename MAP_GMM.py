@@ -60,6 +60,8 @@ class MAP_GMM:
             if i > 0 and abs(log_likehood[-1] - log_likehood[-2]) < 1e-2:
                 break
 
+            print "Iteration: "+str(i)
+
             # Maximization
             self.Maximization(responsibilities)
 
