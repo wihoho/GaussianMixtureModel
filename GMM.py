@@ -435,10 +435,11 @@ class GMM(BaseEstimator):
         for _ in range(self.n_init):
             if 'm' in self.init_params or not hasattr(self, 'means_'):
 
-                miniBatchCluster = MiniBatchKMeans(n_clusters=self.n_components, init_size=self.n_components+1)
-                miniBatchCluster.fit(X)
-                util.storeObject("miniBatchCluster.pkl", miniBatchCluster)
+                # miniBatchCluster = MiniBatchKMeans(n_clusters=self.n_components, init_size=self.n_components+1)
+                # miniBatchCluster.fit(X)
+                # util.storeObject("miniBatchCluster.pkl", miniBatchCluster)
 
+                miniBatchCluster = util.loadObject("ClusterSample50/miniBatchCluster.pkl")
                 self.means_ = miniBatchCluster.cluster_centers_
 
 
@@ -468,6 +469,10 @@ class GMM(BaseEstimator):
                         self.thresh:
                     self.converged_ = True
                     break
+
+                if i > 1:
+                    difference = abs(log_likelihood[-1] - log_likelihood[-2])
+                    print "iteration " +str(i)+":  " +str(difference)
 
                 # Maximization step
                 self._do_mstep(X, responsibilities, self.params,

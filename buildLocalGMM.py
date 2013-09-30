@@ -55,5 +55,8 @@ class videoGMM(threading.Thread):
         print time.ctime()
 
 
-t1 = videoGMM(["birthday", "parade", "picnic", "show", "sports", "wedding"])
+t1 = videoGMM(["birthday", "parade", "picnic"])
+t2 = videoGMM(["show", "sports", "wedding"])
+
 t1.start()
+t2.start()

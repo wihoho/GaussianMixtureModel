@@ -60,7 +60,13 @@ class MAP_GMM:
             if i > 0 and abs(log_likehood[-1] - log_likehood[-2]) < 1e-2:
                 break
 
-            print "Iteration: "+str(i)
+
+
+            if i > 1:
+                difference = abs(log_likehood[-1] - log_likehood[-2])
+                print "Iteration: "+str(i) +"  "+ str(difference)
+            else:
+                print "Iteration: 0"
 
             # Maximization
             self.Maximization(responsibilities)
@@ -98,10 +104,10 @@ if __name__ == "__main__":
     print "Finish reading Kodak videos: "+time.ctime()
 
     # Perform GMM
-    globalGaussianMixture = GMM.GMM(n_components=1000, covariance_type="spherical", init_params="wmc")
+    globalGaussianMixture = GMM.GMM(n_components=1000, covariance_type="full", init_params="wmc", n_iter=10)
     globalGaussianMixture.fit(allKodakVideos)
 
-    util.storeObject("GlobalGaussianMixtureModel.pkl", globalGaussianMixture)
+    util.storeObject("FullCovariance_GlobalGaussianMixtureModel.pkl", globalGaussianMixture)
     logFile.write("Finishing building Global GMM:" +time.ctime()+"/n")
     print "Finishing building Global GMM" + time.ctime()
     logFile.close()
