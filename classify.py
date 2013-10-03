@@ -3,14 +3,41 @@ __author__ = 'GongLi'
 import SVM_T
 import Utility as util
 import numpy as np
+import math
+from sklearn.svm import SVC
+
+
+def multiClassSVM(distances, trainingIndice, testingIndice, semanticLabels):
+
+    trainDistance = distances[np.ix_(trainingIndice, trainingIndice)]
+    testDistance = distances[np.ix_(testingIndice,trainingIndice)]
+
+    meanTrainValue = np.mean(trainDistance)
+
+    trainGramMatrix = math.e **(0 - trainDistance / meanTrainValue)
+    testGramMatrix = math.e ** (0 - testDistance / meanTrainValue)
+    trainLabels = [semanticLabels[i] for i in trainingIndice]
+    testLabels = [semanticLabels[i] for i in testingIndice]
+
+    clf = SVC(kernel = "precomputed")
+    clf.fit(trainGramMatrix, trainLabels)
+    SVMResults = clf.predict(testGramMatrix)
+
+    correct = sum(1.0 * (SVMResults == testLabels))
+    accuracy = correct / len(testLabels)
+    # print "accuracy: " +str(accuracy)+ " (" +str(int(correct))+ "/" +str(len(testLabels))+ ")"
+
+    return accuracy
+
+
 
 if __name__ == "__main__":
 
-    GMM_distance = util.loadObject("Distances/GMM_KodakDistances.pkl")
-    GMM_labels = util.loadObject("Distances/GMM_KodakLabels.pkl")
+    GMM_distance = util.loadObject("/Users/GongLi/PycharmProjects/GaussianMixtureModel/Distances/GMM_n_iteration500_KodakDistances.pkl")
+    GMM_labels = util.loadObject("/Users/GongLi/PycharmProjects/GaussianMixtureModel/Distances/GMM_n_iteration500_KodakLabels.pkl")
 
-    EMD_distance = util.loadObject("Distances/EMD_KodakDistanceMatrixLevel0.pkl")
-    EMD_labels = util.loadObject("Distances/EMD_KodakLabelsLevel0.pkl")
+    EMD_distance = util.loadObject("/Users/GongLi/PycharmProjects/GaussianMixtureModel/Distances/EMD_KodakDistanceMatrixLevel0.pkl")
+    EMD_labels = util.loadObject("/Users/GongLi/PycharmProjects/GaussianMixtureModel/Distances/EMD_KodakLabelsLevel0.pkl")
 
 
     GMM_distances = []
@@ -28,9 +55,12 @@ if __name__ == "__main__":
 
     for i in range(10):
 
-        trainingIndice, testingIndice = util.randomTrainingIndice(GMM_labels)
+        trainingIndice, testingIndice = util.randomTrainingIndice(GMM_labels, 2)
         GMM_aps = SVM_T.runSVM_T(GMM_distances, binaryLabels, trainingIndice, testingIndice)
         EMD_aps = SVM_T.runSVM_T(EMD_distances, binaryLabels, trainingIndice, testingIndice)
+
+        # GMM_aps = multiClassSVM(GMM_distance, trainingIndice, testingIndice, EMD_labels)
+        # EMD_aps = multiClassSVM(EMD_distance, trainingIndice, testingIndice, EMD_labels)
 
         allGMM.append(GMM_aps)
         allEMD.append(EMD_aps)

@@ -7,7 +7,7 @@ import numpy as np
 
 def GMM_Distance(clipOne, clipTwo, globalGMM, covarianceType):
 
-    numberGaussian, numberDimension = globalGMM.covars_.shape
+    numberGaussian, numberDimension, numberDimension = globalGMM.covars_.shape
 
     resultDistance = 0
     if covarianceType == "spherical":
@@ -17,13 +17,19 @@ def GMM_Distance(clipOne, clipTwo, globalGMM, covarianceType):
 
             resultDistance += globalGMM.weights_[i] * temp * globalGMM.covars_[i][0]
 
-    return resultDistance / 2.0
+    if covarianceType == "full":
+
+        for i in range(numberGaussian):
+            temp = (clipOne[i] - clipTwo[i]).reshape((1, numberDimension))
+            resultDistance += globalGMM.weights_[i] * np.dot(np.dot(temp, 1.0 / globalGMM.covars_[i]), temp.T)
+
+    return abs(resultDistance / 2.0)
 
 if __name__ == "__main__":
 
-    globalGMM = util.loadObject("/Users/GongLi/PycharmProjects/GaussianMixtureModel/ClusterSample50/GlobalGaussianMixtureModel.pkl")
+    globalGMM = util.loadObject("/Users/GongLi/PycharmProjects/GaussianMixtureModel/ClusterSample50/FullCovariance_GlobalGaussianMixtureModel.pkl")
 
-    path = "/Users/GongLi/PycharmProjects/GaussianMixtureModel/MAP_n_iteration_50"
+    path = "/Users/GongLi/PycharmProjects/GaussianMixtureModel/Test/Full"
     labels = []
     clips = []
     for label in os.listdir(path):
@@ -46,14 +52,14 @@ if __name__ == "__main__":
     for i in range(numberOfClips):
         for j in range(i + 1, numberOfClips, 1):
 
-            distanceMatrix[i][j] = GMM_Distance(clips[i], clips[j], globalGMM, "spherical")
+            distanceMatrix[i][j] = GMM_Distance(clips[i], clips[j], globalGMM, "full")
             distanceMatrix[j][i] = distanceMatrix[i][j]
 
             print "(" +str(i) +"," +str(j) +"): " +str(distanceMatrix[i][j])
 
     # store
-    # util.storeObject("KodakLabels.pkl", labels)
-    util.storeObject("GMM_n_iteration50_KodakDistances.pkl", distanceMatrix)
+    util.storeObject("FullKodakLabels.pkl", labels)
+    util.storeObject("FullKodakDistances.pkl", distanceMatrix)
 
 
 

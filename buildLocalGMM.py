@@ -21,11 +21,15 @@ class videoGMM(threading.Thread):
         threadName = self.getName()
 
         path = "/Users/GongLi/Dropbox/FYP/Duan Lixin Data Set/sift_features/Kodak"
-        globalGaussianMixture = util.loadObject("ClusterSample50/GlobalGaussianMixtureModel.pkl")
+        globalGaussianMixture = util.loadObject("ClusterSample50/PCA64_FullCovariance_GlobalGaussianMixtureModel.pkl")
         globalGaussianMixture.n_iter = 50
+
+        pca64 = util.loadObject("ClusterSample50/pca64.pkl")
 
         for labelName in self.labelNames:
             classPath = path +"/"+ labelName
+
+            numProcessed = 0
             for video in os.listdir(classPath):
 
                 if video == ".DS_Store":
@@ -35,6 +39,9 @@ class videoGMM(threading.Thread):
 
                 initalTime = time.time()
                 videoData = util.readVideoData(videoPath, subSampling = 5)
+                videoData = pca64.transform(videoData)
+
+
                 mapGMM = MAP_GMM(globalGaussianMixture, videoData)
                 mapMean = mapGMM.MAP()
                 afterTime = time.time()
@@ -46,7 +53,7 @@ class videoGMM(threading.Thread):
 
                 print threadName+": MAP--"+labelName+"_"+video+" "+ str(videoData.shape)+ "   "+str(processTime)+"s!"
 
-                outputFileName = "MAP_n_iteration_50/" +labelName+"_"+video+".pkl"
+                outputFileName = "MAP_n_iteration = 50_Full Covariance_PCA64/" +labelName+"_"+video+".pkl"
                 util.storeObject(outputFileName, mapMean)
 
                 del videoData

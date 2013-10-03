@@ -6,12 +6,16 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/GMM.py" changelist="dc956a27-a1a9-4b7a-bd52-c6d5945254b9" time="1380552044284" ignored="false" />
     <file path="/Test.py" changelist="dc956a27-a1a9-4b7a-bd52-c6d5945254b9" time="1380525731381" ignored="false" />
-    <file path="/MAP_GMM.py" changelist="dc956a27-a1a9-4b7a-bd52-c6d5945254b9" time="1380551979173" ignored="false" />
+    <file path="/MAP_GMM.py" changelist="dc956a27-a1a9-4b7a-bd52-c6d5945254b9" time="1380642364807" ignored="false" />
     <file path="/TestOne.py" changelist="dc956a27-a1a9-4b7a-bd52-c6d5945254b9" time="1380463422688" ignored="false" />
-    <file path="/buildLocalGMM.py" changelist="dc956a27-a1a9-4b7a-bd52-c6d5945254b9" time="1380545203884" ignored="false" />
-    <file path="/calculateDistance.py" changelist="dc956a27-a1a9-4b7a-bd52-c6d5945254b9" time="1380535509564" ignored="false" />
-    <file path="/Utility.py" changelist="dc956a27-a1a9-4b7a-bd52-c6d5945254b9" time="1380537669326" ignored="false" />
-    <file path="/classify.py" changelist="dc956a27-a1a9-4b7a-bd52-c6d5945254b9" time="1380537980927" ignored="false" />
+    <file path="/buildLocalGMM.py" changelist="dc956a27-a1a9-4b7a-bd52-c6d5945254b9" time="1380681593553" ignored="false" />
+    <file path="/calculateDistance.py" changelist="dc956a27-a1a9-4b7a-bd52-c6d5945254b9" time="1380684449797" ignored="false" />
+    <file path="/Utility.py" changelist="dc956a27-a1a9-4b7a-bd52-c6d5945254b9" time="1380600807167" ignored="false" />
+    <file path="/classify.py" changelist="dc956a27-a1a9-4b7a-bd52-c6d5945254b9" time="1380685797657" ignored="false" />
+    <file path="$PROJECT_DIR$/../Interview/A4/Johnson.py" changelist="dc956a27-a1a9-4b7a-bd52-c6d5945254b9" time="1380613667079" ignored="false" />
+    <file path="/Johnson.py" changelist="dc956a27-a1a9-4b7a-bd52-c6d5945254b9" time="1380613664892" ignored="false" />
+    <file path="$PROJECT_DIR$/../Interview/A4/test.txt" changelist="dc956a27-a1a9-4b7a-bd52-c6d5945254b9" time="1380607581340" ignored="false" />
+    <file path="$PROJECT_DIR$/../Interview/A4/g1.txt" changelist="dc956a27-a1a9-4b7a-bd52-c6d5945254b9" time="1380607591734" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,31 +35,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="buildLocalGMM.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/buildLocalGMM.py">
+      <file leaf-file-name="calculateDistance.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Test/calculateDistance.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="19" selection-start="667" selection-end="667" vertical-scroll-proportion="0.0">
+            <state line="35" column="32" selection-start="1141" selection-end="1141" vertical-scroll-proportion="0.6203554">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MAP_GMM.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MAP_GMM.py">
+      <file leaf-file-name="classify.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/classify.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="102" column="33" selection-start="3292" selection-end="3292" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GMM.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/GMM.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="226" column="8" selection-start="7837" selection-end="7837" vertical-scroll-proportion="-4.186709">
+            <state line="16" column="31" selection-start="412" selection-end="412" vertical-scroll-proportion="0.0">
               <folding>
-                <marker date="1380552053000" expanded="true" signature="6401:6455" placeholder="import ..." />
+                <element signature="e#23#35#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Utility.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Utility.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="63" column="66" selection-start="1559" selection-end="1592" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -72,20 +76,21 @@
       <list>
         <option value="$PROJECT_DIR$/TestOne.py" />
         <option value="$PROJECT_DIR$/Test.py" />
-        <option value="$PROJECT_DIR$/calculateDistance.py" />
         <option value="$PROJECT_DIR$/Distances.py" />
-        <option value="$PROJECT_DIR$/Utility.py" />
-        <option value="$PROJECT_DIR$/classify.py" />
-        <option value="$PROJECT_DIR$/MAP_GMM.py" />
+        <option value="$PROJECT_DIR$/calculateDistance.py" />
         <option value="$PROJECT_DIR$/GMM.py" />
+        <option value="$PROJECT_DIR$/Utility.py" />
+        <option value="$PROJECT_DIR$/MAP_GMM.py" />
         <option value="$PROJECT_DIR$/buildLocalGMM.py" />
+        <option value="$PROJECT_DIR$/Test/calculateDistance.py" />
+        <option value="$PROJECT_DIR$/classify.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="58" />
+    <option name="x" value="55" />
     <option name="y" value="22" />
-    <option name="width" value="1222" />
+    <option name="width" value="1225" />
     <option name="height" value="778" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -142,7 +147,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../DomainAdaption" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Interview" />
     <property name="FullScreen" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
@@ -157,10 +162,12 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Test" />
       <recent name="$PROJECT_DIR$/Distances" />
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ClusterSample50" />
       <recent name="$PROJECT_DIR$/Distances" />
     </key>
   </component>
@@ -179,27 +186,6 @@
       <module name="GaussianMixtureModel" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Test.py" />
-      <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PyDebugRunner" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PyDebugRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="MAP_GMM" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="GaussianMixtureModel" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MAP_GMM.py" />
       <option name="PARAMETERS" value="" />
       <RunnerSettings RunnerId="PyDebugRunner" />
       <RunnerSettings RunnerId="PythonRunner" />
@@ -228,27 +214,6 @@
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
-    <configuration default="false" name="calculateDistance" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="GaussianMixtureModel" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/calculateDistance.py" />
-      <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PyDebugRunner" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PyDebugRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
     <configuration default="false" name="classify" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -263,6 +228,48 @@
       <module name="GaussianMixtureModel" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/classify.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PyDebugRunner" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PyDebugRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="buildLocalGMM" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="GaussianMixtureModel" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/buildLocalGMM.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PyDebugRunner" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PyDebugRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="calculateDistance" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="GaussianMixtureModel" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Test/calculateDistance.py" />
       <option name="PARAMETERS" value="" />
       <RunnerSettings RunnerId="PyDebugRunner" />
       <RunnerSettings RunnerId="PythonRunner" />
@@ -331,18 +338,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.Test" />
-      <item index="1" class="java.lang.String" itemvalue="Python.MAP_GMM" />
-      <item index="2" class="java.lang.String" itemvalue="Python.TestOne" />
-      <item index="3" class="java.lang.String" itemvalue="Python.calculateDistance" />
-      <item index="4" class="java.lang.String" itemvalue="Python.classify" />
+      <item index="1" class="java.lang.String" itemvalue="Python.TestOne" />
+      <item index="2" class="java.lang.String" itemvalue="Python.classify" />
+      <item index="3" class="java.lang.String" itemvalue="Python.buildLocalGMM" />
+      <item index="4" class="java.lang.String" itemvalue="Python.calculateDistance" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.classify" />
         <item index="1" class="java.lang.String" itemvalue="Python.calculateDistance" />
-        <item index="2" class="java.lang.String" itemvalue="Python.Test" />
-        <item index="3" class="java.lang.String" itemvalue="Python.TestOne" />
-        <item index="4" class="java.lang.String" itemvalue="Python.MAP_GMM" />
+        <item index="2" class="java.lang.String" itemvalue="Python.buildLocalGMM" />
+        <item index="3" class="java.lang.String" itemvalue="Python.calculateDistance" />
+        <item index="4" class="java.lang.String" itemvalue="Python.Test" />
       </list>
     </recent_temporary>
   </component>
@@ -356,18 +363,18 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="58" y="22" width="1222" height="778" extended-state="0" />
+    <frame x="55" y="22" width="1225" height="778" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24744898" sideWeight="0.5759878" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26020408" sideWeight="0.5759878" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44680852" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16542156" sideWeight="0.6375" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26717559" sideWeight="0.5914761" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16112266" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42401215" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40852392" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -449,25 +456,15 @@
           <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/classify.py</url>
-          <line>28</line>
-          <option name="timeStamp" value="33" />
+          <url>file://$PROJECT_DIR$/Test/calculateDistance.py</url>
+          <line>25</line>
+          <option name="timeStamp" value="36" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="34" />
+      <option name="time" value="40" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///Library/Python/2.7/site-packages/scikit_learn-0.14_git-py2.7-macosx-10.8-intel.egg/sklearn/metrics/pairwise.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="35" selection-start="2837" selection-end="2837" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GMM.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="43" column="32" selection-start="1354" selection-end="1354" vertical-scroll-proportion="0.0" />
@@ -495,15 +492,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/calculateDistance.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="26" selection-start="535" selection-end="535" vertical-scroll-proportion="0.08493151">
-          <folding>
-            <element signature="e#23#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Distances/EMD_KodakDistanceMatrixLevel0.pkl">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
@@ -514,45 +502,58 @@
         <state line="58" column="26" selection-start="1786" selection-end="1786" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classify.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="21" selection-start="701" selection-end="701" vertical-scroll-proportion="0.034188036">
-          <folding>
-            <element signature="e#23#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Utility.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="4" selection-start="384" selection-end="384" vertical-scroll-proportion="-0.008547009" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ClusterSample50/log">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="24" selection-start="163" selection-end="163" vertical-scroll-proportion="0.057142857" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/buildLocalGMM.py">
+    <entry file="file://$PROJECT_DIR$/calculateDistance.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="19" selection-start="667" selection-end="667" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MAP_GMM.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="33" selection-start="3292" selection-end="3292" vertical-scroll-proportion="0.0">
+        <state line="53" column="11" selection-start="1579" selection-end="1579" vertical-scroll-proportion="0.6809422">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GMM.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="226" column="8" selection-start="7837" selection-end="7837" vertical-scroll-proportion="-4.186709">
+        <state line="407" column="8" selection-start="14384" selection-end="14384" vertical-scroll-proportion="0.012847966" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MAP_GMM.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="91" column="45" selection-start="2907" selection-end="2907" vertical-scroll-proportion="0.5700326" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buildLocalGMM.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="34" selection-start="541" selection-end="541" vertical-scroll-proportion="0.23126338" />
+      </provider>
+    </entry>
+    <entry file="file:///Library/Python/2.7/site-packages/numpy-1.8.0.dev_dff8c94_20130602-py2.7-macosx-10.8-intel.egg/numpy/core/_methods.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="0" selection-start="1946" selection-end="1946" vertical-scroll-proportion="0.33271718" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utility.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="66" selection-start="1559" selection-end="1592" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classify.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="31" selection-start="412" selection-end="412" vertical-scroll-proportion="0.0">
           <folding>
-            <marker date="1380552053000" expanded="true" signature="6401:6455" placeholder="import ..." />
+            <element signature="e#23#35#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/calculateDistance.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="32" selection-start="1141" selection-end="1141" vertical-scroll-proportion="0.6203554">
+          <folding />
         </state>
       </provider>
     </entry>

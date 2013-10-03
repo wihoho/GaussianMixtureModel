@@ -61,7 +61,7 @@ def loadObject(fileName):
     obj = pickle.load(file)
     return obj
 
-def randomTrainingIndice(labels):
+def randomTrainingIndice(labels, numberOfTrainingDataFromEachClass):
     labelSize = len(labels)
 
     birthdayIndices = [i for i in range(labelSize) if labels[i] == "birthday"]
@@ -74,12 +74,12 @@ def randomTrainingIndice(labels):
     trainingIndice = []
 
     # randomly choose 3 indices from each class
-    trainingIndice += random.sample(birthdayIndices, 3)
-    trainingIndice += random.sample(paradeIndices, 3)
-    trainingIndice += random.sample(picnicIndices, 3)
-    trainingIndice += random.sample(showIndices, 3)
-    trainingIndice += random.sample(sportsIndices, 3)
-    trainingIndice += random.sample(weddingIndices, 3)
+    trainingIndice += random.sample(birthdayIndices, numberOfTrainingDataFromEachClass)
+    trainingIndice += random.sample(paradeIndices, numberOfTrainingDataFromEachClass)
+    trainingIndice += random.sample(picnicIndices, numberOfTrainingDataFromEachClass)
+    trainingIndice += random.sample(showIndices, numberOfTrainingDataFromEachClass)
+    trainingIndice += random.sample(sportsIndices, numberOfTrainingDataFromEachClass)
+    trainingIndice += random.sample(weddingIndices, numberOfTrainingDataFromEachClass)
 
     testIndice = [i for i in range(len(labels))]
     for potential in trainingIndice:
