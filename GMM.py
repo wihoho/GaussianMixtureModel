@@ -437,7 +437,7 @@ class GMM(BaseEstimator):
 
                 miniBatchCluster = MiniBatchKMeans(n_clusters=self.n_components, init_size=self.n_components+1)
                 miniBatchCluster.fit(X)
-                util.storeObject("miniBatchCluster.pkl", miniBatchCluster)
+                # util.storeObject("miniBatchCluster.pkl", miniBatchCluster)
 
                 # miniBatchCluster = util.loadObject("ClusterSample50/miniBatchCluster.pkl")
                 self.means_ = miniBatchCluster.cluster_centers_

@@ -7,7 +7,14 @@ import numpy as np
 
 def GMM_Distance(clipOne, clipTwo, globalGMM, covarianceType):
 
-    numberGaussian, numberDimension = globalGMM.covars_.shape
+
+    if len(globalGMM.covars_.shape) == 3:
+        numberGaussian, numberDimension, numberDimension = globalGMM.covars_.shape
+    elif len(globalGMM.covars_.shape) == 2:
+        numberGaussian, numberDimension = globalGMM.covars_.shape
+
+
+
 
     resultDistance = 0
     if covarianceType == "spherical":
@@ -17,13 +24,19 @@ def GMM_Distance(clipOne, clipTwo, globalGMM, covarianceType):
 
             resultDistance += globalGMM.weights_[i] * temp * globalGMM.covars_[i][0]
 
+    if covarianceType == "full":
+
+        for i in range(numberGaussian):
+            temp = (clipOne[i] - clipTwo[i]).reshape((1, numberDimension))
+            resultDistance += globalGMM.weights_[i] * abs(np.dot(np.dot(temp, 1.0 / globalGMM.covars_[i]), temp.T))
+
     return resultDistance / 2.0
 
 if __name__ == "__main__":
 
-    globalGMM = util.loadObject("/Users/GongLi/PycharmProjects/GaussianMixtureModel/ClusterSample50/GlobalGaussianMixtureModel.pkl")
+    globalGMM = util.loadObject("/Users/GongLi/PycharmProjects/GaussianMixtureModel/ClusterSample50/PCA64_SphericalCovariance_GlobalGaussianMixtureModel.pkl")
 
-    path = "/Users/GongLi/PycharmProjects/GaussianMixtureModel/MAP_n_iteration_50"
+    path = "/Users/GongLi/PycharmProjects/GaussianMixtureModel/MAP_n_iteration = 50_Spherical Covariance_PCA64"
     labels = []
     clips = []
     for label in os.listdir(path):
@@ -53,7 +66,7 @@ if __name__ == "__main__":
 
     # store
     # util.storeObject("KodakLabels.pkl", labels)
-    util.storeObject("GMM_n_iteration50_KodakDistances.pkl", distanceMatrix)
+    util.storeObject("PCA64_Spherical_GMM_n_iteration50_KodakDistances.pkl", distanceMatrix)
 
 
 

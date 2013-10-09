@@ -1,69 +1,58 @@
 import os
 import Utility as util
 from MAP_GMM import MAP_GMM
-import threading
 import time
-import xlwt
+from multiprocessing import Process
 
-class videoGMM(threading.Thread):
+def GMM_Histogram(labelName):
 
-    def __init__(self, labelNames):
-        super(videoGMM, self).__init__()
-        self.labelNames = labelNames
+    path = "/Users/GongLi/Dropbox/FYP/Duan Lixin Data Set/sift_features/Kodak"
+    globalGaussianMixture = util.loadObject("/Users/GongLi/PycharmProjects/GaussianMixtureModel/ClusterSample50/FullCovariance_GlobalGaussianMixtureModel.pkl")
+    globalGaussianMixture.n_iter = 50
 
-    def run(self):
+    classPath = path +"/"+ labelName
+    pidName = os.getpid()
 
+    for video in os.listdir(classPath):
+        if video == ".DS_Store":
+            continue
 
-        runningTime = xlwt.Workbook()
-        rt = runningTime.add_sheet("GMM Running Time")
-        inddex = 0
-
-        threadName = self.getName()
-
-        path = "/Users/GongLi/Dropbox/FYP/Duan Lixin Data Set/sift_features/Kodak"
-        globalGaussianMixture = util.loadObject("ClusterSample50/PCA64_FullCovariance_GlobalGaussianMixtureModel.pkl")
-        globalGaussianMixture.n_iter = 50
-
-        pca64 = util.loadObject("ClusterSample50/pca64.pkl")
-
-        for labelName in self.labelNames:
-            classPath = path +"/"+ labelName
-
-            numProcessed = 0
-            for video in os.listdir(classPath):
-
-                if video == ".DS_Store":
-                    continue
-
-                videoPath = classPath +"/"+ video
-
-                initalTime = time.time()
-                videoData = util.readVideoData(videoPath, subSampling = 5)
-                videoData = pca64.transform(videoData)
+        existingFiles = os.listdir("Full_128_Iteration_50")
+        currentFileName = labelName+"_"+video+".pkl"
+        if currentFileName in existingFiles:
+            continue
 
 
-                mapGMM = MAP_GMM(globalGaussianMixture, videoData)
-                mapMean = mapGMM.MAP()
-                afterTime = time.time()
+        videoPath = classPath +"/"+ video
 
-                processTime = afterTime - initalTime
-                rt.write(inddex, 0, processTime)
-                inddex += 1
+        initalTime = time.time()
+        videoData = util.readVideoData(videoPath, subSampling = 5)
+
+        mapGMM = MAP_GMM(globalGaussianMixture, videoData)
+        mapMean = mapGMM.MAP()
+        afterTime = time.time()
+
+        processTime = afterTime - initalTime
+
+        print pidName+ ": MAP_Full_128"+labelName+"_"+video+" "+ str(videoData.shape)+ "   "+str(processTime)+"s"
+
+        outputFileName = "Full_128_Iteration_50/" + currentFileName
+        util.storeObject(outputFileName, mapMean)
+
+        del videoData
+
+    print time.ctime()
+    print "Finished label :" +labelName
 
 
-                print threadName+": MAP--"+labelName+"_"+video+" "+ str(videoData.shape)+ "   "+str(processTime)+"s!"
+if __name__ == "__main__":
 
-                outputFileName = "MAP_n_iteration = 50_Full Covariance_PCA64/" +labelName+"_"+video+".pkl"
-                util.storeObject(outputFileName, mapMean)
+    p1 = Process(target= GMM_Histogram, args =  ("parade",))
+    p2 = Process(target= GMM_Histogram, args = ("picnic",))
+    p3 = Process(target= GMM_Histogram, args = ("show",))
+    p4 = Process(target= GMM_Histogram, args = ("sports",))
 
-                del videoData
-
-        runningTime.save(threadName+"_RunningTime.xls")
-        print time.ctime()
-
-
-t1 = videoGMM(["birthday", "parade", "picnic"])
-t2 = videoGMM(["show", "sports", "wedding"])
-
-t1.start()
-t2.start()
+    p1.start()
+    p2.start()
+    p3.start()
+    p4.start()

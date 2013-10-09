@@ -104,10 +104,10 @@ if __name__ == "__main__":
     print "Finish reading Kodak videos: "+time.ctime()
 
     # Perform GMM
-    globalGaussianMixture = GMM.GMM(n_components=500, covariance_type="full", init_params="wmc", n_iter=50)
+    globalGaussianMixture = GMM.GMM(n_components=1000, covariance_type="spherical", init_params="wmc", n_iter=50)
     globalGaussianMixture.fit(allKodakVideos)
 
-    util.storeObject("PCA64_FullCovariance_GlobalGaussianMixtureModel.pkl", globalGaussianMixture)
+    util.storeObject("ClusterSample50/PCA64_SphericalCovariance_GlobalGaussianMixtureModel.pkl", globalGaussianMixture)
     logFile.write("Finishing building Global GMM:" +time.ctime()+"/n")
     print "Finishing building Global GMM" + time.ctime()
     logFile.close()
