@@ -11,7 +11,7 @@ def GMM_Histogram(labelName):
     globalGaussianMixture.n_iter = 50
 
     classPath = path +"/"+ labelName
-    pidName = os.getpid()
+    pidName = str(os.getpid())
 
     for video in os.listdir(classPath):
         if video == ".DS_Store":
@@ -19,6 +19,8 @@ def GMM_Histogram(labelName):
 
         existingFiles = os.listdir("Full_128_Iteration_50")
         currentFileName = labelName+"_"+video+".pkl"
+        print currentFileName
+
         if currentFileName in existingFiles:
             continue
 
@@ -26,7 +28,7 @@ def GMM_Histogram(labelName):
         videoPath = classPath +"/"+ video
 
         initalTime = time.time()
-        videoData = util.readVideoData(videoPath, subSampling = 5)
+        videoData = util.readVideoData(videoPath, subSampling = 10)
 
         mapGMM = MAP_GMM(globalGaussianMixture, videoData)
         mapMean = mapGMM.MAP()
@@ -47,12 +49,11 @@ def GMM_Histogram(labelName):
 
 if __name__ == "__main__":
 
-    p1 = Process(target= GMM_Histogram, args =  ("parade",))
-    p2 = Process(target= GMM_Histogram, args = ("picnic",))
+    p1 = Process(target= GMM_Histogram, args =  ("wedding",))
+    p2 = Process(target= GMM_Histogram, args = ("parade",))
     p3 = Process(target= GMM_Histogram, args = ("show",))
-    p4 = Process(target= GMM_Histogram, args = ("sports",))
+
 
     p1.start()
     p2.start()
     p3.start()
-    p4.start()

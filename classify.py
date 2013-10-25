@@ -33,11 +33,16 @@ def multiClassSVM(distances, trainingIndice, testingIndice, semanticLabels):
 
 if __name__ == "__main__":
 
-    GMM_distance = util.loadObject("/Users/GongLi/PycharmProjects/GaussianMixtureModel/Distances/Spherical 128/GMM_n_iteration500_KodakDistances.pkl")
+    GMM_distance = util.loadObject("/Users/GongLi/PycharmProjects/GaussianMixtureModel/Distances/Zhou/Zhou_Full_36_Kodak.pkl")
     GMM_labels = util.loadObject("/Users/GongLi/PycharmProjects/GaussianMixtureModel/Distances/Full 36/PCA36_GMM_n_iteration50_KodakLabels.pkl")
 
-    EMD_distance = util.loadObject("/Users/GongLi/PycharmProjects/GaussianMixtureModel/Distances/Spherical 64/PCA64_Spherical_GMM_n_iteration50_KodakDistances.pkl")
+    EMD_distance = util.loadObject("/Users/GongLi/PycharmProjects/GaussianMixtureModel/Distances/EMD_KodakDistanceMatrixLevel0.pkl")
     EMD_labels = util.loadObject("/Users/GongLi/PycharmProjects/GaussianMixtureModel/Distances/EMD_KodakLabelsLevel0.pkl")
+
+
+    # from sklearn.preprocessing import normalize
+    # GMM_distance = normalize(GMM_distance, norm="l2")
+    # EMD_distance = normalize(EMD_distance, norm="l2")
 
 
     GMM_distances = []

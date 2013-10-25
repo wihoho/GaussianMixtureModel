@@ -78,7 +78,7 @@ if __name__ == "__main__":
 
     path = "/Users/GongLi/Dropbox/FYP/Duan Lixin Data Set/sift_features/Kodak"
     videoList = []
-    pca64 = util.loadObject("/Users/GongLi/PycharmProjects/GaussianMixtureModel/ClusterSample50/pca64.pkl")
+    pca36 = util.loadObject("/Users/GongLi/PycharmProjects/GaussianMixtureModel/ClusterSample50/pca36.pkl")
 
     for label in os.listdir(path):
         if label == ".DS_Store":
@@ -93,7 +93,7 @@ if __name__ == "__main__":
             print videoPath
 
             videoData = util.readVideoData(videoPath, subSampling=50)
-            videoData = pca64.transform(videoData)
+            videoData = pca36.transform(videoData)
             videoList.append(videoData)
 
 
@@ -107,7 +107,7 @@ if __name__ == "__main__":
     globalGaussianMixture = GMM.GMM(n_components=1000, covariance_type="spherical", init_params="wmc", n_iter=50)
     globalGaussianMixture.fit(allKodakVideos)
 
-    util.storeObject("ClusterSample50/PCA64_SphericalCovariance_GlobalGaussianMixtureModel.pkl", globalGaussianMixture)
+    util.storeObject("ClusterSample50/PCA36_SphericalCovariance_GlobalGaussianMixtureModel.pkl", globalGaussianMixture)
     logFile.write("Finishing building Global GMM:" +time.ctime()+"/n")
     print "Finishing building Global GMM" + time.ctime()
     logFile.close()

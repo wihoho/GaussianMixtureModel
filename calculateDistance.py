@@ -34,11 +34,13 @@ def GMM_Distance(clipOne, clipTwo, globalGMM, covarianceType):
 
 if __name__ == "__main__":
 
-    globalGMM = util.loadObject("/Users/GongLi/PycharmProjects/GaussianMixtureModel/ClusterSample50/PCA64_SphericalCovariance_GlobalGaussianMixtureModel.pkl")
+    globalGMM = util.loadObject("/Users/GongLi/PycharmProjects/GaussianMixtureModel/ClusterSample50/FullCovariance_GlobalGaussianMixtureModel.pkl")
 
-    path = "/Users/GongLi/PycharmProjects/GaussianMixtureModel/MAP_n_iteration = 50_Spherical Covariance_PCA64"
+    path = "/Users/GongLi/PycharmProjects/GaussianMixtureModel/Full_128_Iteration_50"
     labels = []
     clips = []
+
+    index = 0
     for label in os.listdir(path):
         if label == ".DS_Store":
             continue
@@ -53,22 +55,23 @@ if __name__ == "__main__":
             clips.append(c)
             labels.append(label)
 
+            print str(index) +": "+ video
+            index += 1
+
     # calculate distances
     numberOfClips = len(labels)
     distanceMatrix = np.zeros((numberOfClips, numberOfClips))
     for i in range(numberOfClips):
         for j in range(i + 1, numberOfClips, 1):
 
-            distanceMatrix[i][j] = GMM_Distance(clips[i], clips[j], globalGMM, "spherical")
+            distanceMatrix[i][j] = GMM_Distance(clips[i], clips[j], globalGMM, "full")
             distanceMatrix[j][i] = distanceMatrix[i][j]
 
             print "(" +str(i) +"," +str(j) +"): " +str(distanceMatrix[i][j])
 
     # store
-    # util.storeObject("KodakLabels.pkl", labels)
-    util.storeObject("PCA64_Spherical_GMM_n_iteration50_KodakDistances.pkl", distanceMatrix)
-
-
+    util.storeObject("Distances\Full 128\KodakLabels.pkl", labels)
+    util.storeObject("Distances\Full 128\Full_GMM_n_iteration50_KodakDistances.pkl", distanceMatrix)
 
 
 
